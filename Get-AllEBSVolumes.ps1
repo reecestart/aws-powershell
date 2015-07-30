@@ -49,5 +49,9 @@ foreach ($Volume in $Volumes)
     }
 
 #After the loop export the array to CSV and open
+if ($VolumDetailsOutArray.Count -eq "0")
+    {Write-Host No EBS Volumes were found
+    sleep 2
+    Exit}
 $VolumDetailsOutArray | Export-Csv -NoTypeInformation -Path $PathToSave\VolumeInfo.csv
 Invoke-item $PathToSave\VolumeInfo.csv
