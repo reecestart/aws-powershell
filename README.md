@@ -14,7 +14,8 @@ A repository of some AWS PowerShell scripts I wrote and use which you might find
 |3|Enter a unique Snapshot Identifier||
 |4|Select destination Region for copied Redshift Cluster||
 |5|Select the unique Snapshot Copy Grant that is created based on your username and date & time|Snapshot copy between regions will take time|
-|6|...||
+|6|Select a VPC Security Group||
+|7|Enter a unique Redsift Cluster Identifier||
 
 
 #### NOTE: Update Lines 7, 8, and 9 for MailMe Function
