@@ -1,4 +1,4 @@
-﻿$Version = "2.0"
+﻿$Version = "2.1"
 Initialize-AWSDefaults
 $shell = New-Object -ComObject "Shell.Application"
 $Global:Newline = "`r`n"
@@ -200,6 +200,7 @@ Function Main5 {
             }
     else
         {
+        $Global:SnapshotCopyGrantName = $Global:SnapshotCopyGrantName.ToLower()
         $DisableRSSnapshotCopy = Disable-RSSnapshotCopy -ClusterIdentifier $Global:ClusterIdentifier -Region $Global:Region
         $EnableRSSnapshotCopy = Enable-RSSnapshotCopy -DestinationRegion $Global:DestinationRegion -ClusterIdentifier $Global:ClusterIdentifier -SnapshotCopyGrantName $Global:SnapshotCopyGrantName -Region $Global:Region
         $comboBox4.Enabled = $False
