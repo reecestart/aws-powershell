@@ -593,7 +593,7 @@ $System_Drawing_Size.Height = 11
 $System_Drawing_Size.Width = 167
 $label8.Size = $System_Drawing_Size
 $label8.TabIndex = 24
-$label8.Text = "Reece Denne - 18 Feb 2016"
+$label8.Text = "Reece Denne - https://github.com/reecestart"
 
 $form1.Controls.Add($label8)
 
