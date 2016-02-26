@@ -1,8 +1,11 @@
 # aws-powershell
 A repository of some AWS PowerShell scripts I wrote and use which you might find useful.
 ## Copy-RedshiftClusterBetweenRegions-Form.ps1
+
 [Copy-RedshiftClusterBetweenRegions-Form.ps1](../master/Copy-RedshiftClusterBetweenRegions-Form.ps1)
-![alt tag](https://raw.githubusercontent.com/reecestart/aws-powershell/master/Images/Copy.Redshift.Cluster.Between.Regions.png)
+
+![alt tag](https://raw.githubusercontent.com/reecestart/aws-powershell/master/Images/Copy.Redshift.Cluster.Between.Regions.Complete.png)
+
 
 ### Steps
 
