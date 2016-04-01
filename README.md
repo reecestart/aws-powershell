@@ -1,5 +1,8 @@
 # aws-powershell
 A repository of some AWS PowerShell scripts I wrote and use which you might find useful.
+
+[![Gitter](https://badges.gitter.im/reecestart/aws-powershell.svg)](https://gitter.im/reecestart/aws-powershell?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ## Copy-RedshiftClusterBetweenRegions-Form.ps1
 
 [Copy-RedshiftClusterBetweenRegions-Form.ps1](../master/Copy-RedshiftClusterBetweenRegions-Form.ps1)
