@@ -5,6 +5,10 @@ A repository of some AWS PowerShell scripts I wrote and use which you might find
 
 [![Gitter](https://badges.gitter.im/reecestart/aws-powershell.svg)](https://gitter.im/reecestart/aws-powershell?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+## Requirements
+
+Please note you will need to set your execution policy to `RemoteSigned` and have the latest [AWS PowerShell Tools](https://aws.amazon.com/powershell/) installed.
+
 ## Copy-RedshiftClusterBetweenRegions-Form.ps1
 
 [Copy-RedshiftClusterBetweenRegions-Form.ps1](../master/Copy-RedshiftClusterBetweenRegions-Form.ps1)
