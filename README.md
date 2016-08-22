@@ -9,6 +9,9 @@ Please note you will need to set your execution policy to `RemoteSigned` and hav
 
 ## Copy-RedshiftClusterBetweenRegions-Form.ps1
 
+Requirements:
+Ensure you have the appropriate IAM permissions to make the Redshift API calls (eg. redshift:DescribeClusters)
+
 [Copy-RedshiftClusterBetweenRegions-Form.ps1](../master/Copy-RedshiftClusterBetweenRegions-Form.ps1)
 
 ![alt tag](https://raw.githubusercontent.com/reecestart/aws-powershell/master/Images/Copy.Redshift.Cluster.Between.Regions.Complete.png)
