@@ -10,8 +10,8 @@ $RegionNames = $Regions.RegionName
 
 # The region to run this script against
 Do {
-    Write-Host ...
-    Write-Host Please type the region to process the script against e.g. ap-southeast-2 for Sydney or us-west-2 for Oregon
+    $RegionNames
+    Write-Host Please type the region to process the script against -ForegroundColor Yellow
     $Region = Read-Host
     if($RegionNames -contains $Region) 
         {" Region correct"; $strQuit ="n"}
@@ -32,7 +32,15 @@ Until ($strQuit -eq "N")
 
 # The CloudWatch Log Group Name for your VPC Flow Logs
 # You can get this using the Get-CWLogGroups Command as well
-$CWLLogGroups = Get-CWLLogGroups -Region $Region
+try 
+    {
+    $CWLLogGroups = Get-CWLLogGroups -Region $Region -ErrorAction Stop
+    }
+catch
+    {
+    Write-Host You do not have IAM permissions for Get-CWLLogGroups -ForegroundColor Yellow
+    return
+    }
 $CWLLogGroupsNames = $CWLLogGroups.Arn
 
 # The CloudWatch Log Group Name to run this script against

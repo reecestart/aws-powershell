@@ -38,3 +38,7 @@ $Global:from ="no-reply@redshiftclustermigrator.company.com"
 $Global:CompanySuffix = "@company.com"
 ####### Please set these values ######
 ```
+## Get-CloudWatchLogs.ps1
+
+Requirements:
+Ensure you have CloudWatch Logs IAM permissions (eg. Get-CWLLogGroups)
