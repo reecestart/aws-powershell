@@ -7,10 +7,12 @@ Import-Module 'C:\Program Files (x86)\AWS Tools\PowerShell\AWSPowerShell\AWSPowe
 # Script Name, Source and Version
 Write-Host ScriptName: Get-AllEBSVolumes.ps1
 Write-Host Source: https://github.com/reecestart/aws-powershell
-Write-Host Version: 1.1 - Ensure you are using the latest version
+Write-Host Version: 1.2 - Ensure you are using the latest version
 
 # Path to save
+New-Item -Name Temp -ItemType Directory -ErrorAction SilentlyContinue
 $PathToSave = "C:\Temp"
+
 
 # Get all regions
 $Regions = (Get-AWSRegion).Region
@@ -83,6 +85,13 @@ foreach ($Volume in $Volumes)
         $myobj = $null
     }
 
-#After the loop export the array to CSV and open
-$VolumDetailsOutArray | Export-Csv -NoTypeInformation -Path $PathToSave\VolumeInfo.csv
-Invoke-item $PathToSave\VolumeInfo.csv
+if ($Volumes.Count -eq 0)
+    {
+    Write-Host No Volumes in the account -ForegroundColor Yellow
+    }
+else
+    {
+    #After the loop export the array to CSV and open
+    $VolumDetailsOutArray | Export-Csv -NoTypeInformation -Path $PathToSave\VolumeInfo.csv
+    Invoke-item $PathToSave\VolumeInfo.csv
+    }
